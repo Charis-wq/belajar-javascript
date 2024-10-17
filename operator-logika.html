@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator logika</title>
+</head>
+<body>
+    <script>
+        let name = 'Abdul Charis';
+
+        const nilaiUjian = 75;
+        const nilaiAbsensi = 80;
+
+        const lulusUjian = nilaiUjian > 75;
+        document.writeln(lulusUjian);//false
+        
+        const lulusAbsensi = nilaiAbsensi> 75;
+        document.writeln(lulusAbsensi);//true
+
+
+        const lulus = name + lulusUjian && lulusAbsensi;
+        document.writeln(lulus);//true
+
+        let nilai = 80;
+        let absensi = 80;
+
+        const naikKelas = nilai || absensi;
+        document.writeln(naikKelas);// nilai 80 (true)
+
+        
+
+
+
+
+       
+        
+        
+
+
+        
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
