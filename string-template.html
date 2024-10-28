@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    
+    <script>
+
+        const name = 'Abdul Charis';
+        const template = `name : ${name}`;
+
+        console.log(template);
+        
+        //Exspresion di string templet
+        const nilai = 80;
+        const template2 = `name : ${name}, Lulus : ${nilai > 75}`;
+        
+        console.log(template2)
+
+        //Multiline string
+        
+        const multiline = `Nama Abdul Charis
+saya suka bermain game 
+dan olahraga badminton`;
+
+        document.writeln('<pre>');
+        document.writeln(multiline);
+        document.writeln('</pre>');
+    </script>
+</body>
+</html>

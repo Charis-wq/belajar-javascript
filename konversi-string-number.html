@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+
+    <script>
+
+        //mengubah string ke number
+        const value1 = parseInt('1');
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`);
+
+        //contoh function
+
+        document.writeln(`<p>${parseInt('1.1')}</p>`); //mengkonversi dari string ke number (dalam bilangan bulat)
+        document.writeln(`<p>${parseFloat('1.1')}</p>`);//mengkonversi darim string ke number (dalam bilangan pecahan)
+        document.writeln(`<p>${Number('1.1')}</p>`);//mengkonversi dari sring ke number (dalam bilangan bula atau pecahan)
+        
+        //mengubah number ke string
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+
+        document.writeln(`<p>${total}</p>`);
+
+        //NaN (not a number)
+        document.writeln(`<p>${parseInt('1benar')}</p>`);//interjer masih mentolerir kesalahan penulisan 
+        document.writeln(`<p>${parseInt('salah1')}</p>`);//penulisan yang salah menghasilkan (NaN)
+        document.writeln(`<p>${parseFloat('1.1benar')}</p>`);//begitu juga float masih bisa mentolerrir kesalahan 
+        document.writeln(`<p>${parseFloat('salah1.1')}</p>`);//penulisan yang salah menghasilkan (NaN)
+        document.writeln(`<p>${Number('1.1salah')}</p>`);//tapi number tidak bisa mentolerir kesalahan dalam penulisan hasilnya (NaN)
+
+        //pengoprasian NaN
+
+        const val = Number('salah');//NaN
+        const totalNumber = val + 100;
+
+        document.writeln(`<p>${totalNumber}</p>`);//maka hasilnya akan NAN 
+
+        //is NaN function (untuk mengetahui number NaN)
+
+        document.writeln(`<p>${isNaN(val)}</p>`);//maka akan menghasilkan (true)
+        document.writeln(`<p>${isNaN(100)}</p>`);//maka akan menghasilkan (false)
+        document.writeln(`<p>${NaN}</p>`);//atau bisa begini
+
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
