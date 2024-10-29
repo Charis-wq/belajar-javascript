@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        //penulisan tipe data array
+
+
+        let arrayKosong = [];
+
+        let arrayNama = ['Abdul','Charis','Eko'];
+
+        //cara menambahkan array dengan (push)
+
+        const names = [];
+        names.push('Abdul');
+        names.push('Charis','Budi');
+        names.push('Rudi','Anton','Hermawan');//untuk index array di mulai dengan urutan 0 lalu 1 dan seterusnya.
+
+        console.table(names);
+
+        //opration di array
+
+        const namaLagi = [];
+        namaLagi.push('Abdul');
+        namaLagi.push ('Charis','Budi','Aton','Rudi','Hermawan');
+
+        console.info(namaLagi[0]);
+        console.info(namaLagi[1])
+        console.info(namaLagi[2]);
+        console.info(namaLagi[3]);
+
+        //mengubah array
+        namaLagi[3] = 'Anton';
+        namaLagi[2] = 'Hendro';
+        
+        console.table(namaLagi);
+
+        //untu menghapus/delet array
+
+        delete namaLagi[3];
+
+        console.table(namaLagi);//nanti index no 3 akan hilang
+
+        //jika ingin merubah lagi index no 3
+
+        namaLagi[3] = 'Anton lagi';
+
+        console.table(namaLagi);
+
+        //array juga tidak berpatokan dengan string saja bisa juga dengan number dan boolean
+
+        namaLagi.push(1,2,3,true,false);
+
+        //bahkan kita juga bisa memasukan array dalam array
+        namaLagi.push(['Abdul','Charis']);
+
+
+
+        console.table(namaLagi);
+
+
+
+
+
+        
+        
+
+
+    </script>
+
+
+    
+</body>
+</html>
