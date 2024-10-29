@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator In</title>
+</head>
+<body>
+    <script>
+        //operator in digunakan untuk apakah property ada objek  
+        const person ={
+            firstName : 'Abdul',// ingat gunakan koma(,)
+            lastName : 'Charis'
+
+        };
+
+        if ('firstName' in person) {
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert('Hello');
+        
+        }
+
+        //untuk operator undefined dan null akan tetap true nilanya jadi hati-hati menggunakan operator in 
+
+
+        const student ={
+            firstName : 'Abdul',
+            middleName : undefined,
+            lastName : 'Charis'
+            
+          
+        }
+        if ('middleName' in student){
+            alert(`Hello${student.middleName}`);//hasilnya true
+
+        } else{
+            alert('Hello student');
+        }
+
+        const name =[null, 'Charis', null];
+        const result = 0 in name;
+        document.writeln(`<p>${result}</p>`);//hasilnya true
+    </script>
+</body>
+</html>
