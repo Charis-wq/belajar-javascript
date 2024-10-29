@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        const person = {};//yang membedakan dengan array adalah tutup kurawal ({})
+        //untuk mengubah property
+        person['Nama'] = 'Abdul Charis';
+        person['Negara'] = 'Indonesia';
+        person['umur'] = 27;//untuk tipe data object bisa menggabungkan antara string dan number
+
+        console.table(person);
+
+        //untuk menghapus prperty di object kurang lebih sama di array
+
+        delete person['umur'];
+
+        console.table(person);
+
+        //atau bisa juga langsung memasukan atribut dan valuenya
+
+        const dataDiri ={
+            "Nama Lengkap" : 'Abdul Charis', //untuk penggunan ("") untuk mengspasi atribut
+            negara : 'Indonesia',
+            umur : 27
+
+        };
+
+        console.info(`Nama :${dataDiri["Nama Lengkap"]}`); //untuk pengoprasiannya preperty kalo lebih dari 1 suku kata harus menggunakan ([])
+        console.info(`Negara : ${dataDiri.negara}`); //jika property hanya menggunakan 1 suku kata kita bisa menggunakan (.) saja 
+        console.info(`Umur : ${dataDiri.umur}`);
+        
+        console.table(dataDiri);
+
+
+
+    </script>
+    
+</body>
+</html>
