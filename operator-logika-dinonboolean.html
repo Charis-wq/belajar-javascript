@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator logika di non Boolean</title>
+</head>
+<body>
+    <script>
+
+        /*operator OR di non boolean (||)
+        akan mengambil nilai yang truthy dari kanan 
+        dan jika nilainya falsy semua akan di ambil yang
+        paling terakhir
+        */
+       console.info('HELLO' || ''); //'HELLO'
+       console.info('' || []); //[] array
+       console.info('0' || 'NOL'); //'0'
+       console.info(0 || 'NOL'); //'NOL'
+       console.info(null || 'NULL'); //'NULL'
+       console.info(undefined || 'UNDEFINED'); //'UNDEFINED'
+       console.info(0 || false); //false
+
+       const person ={
+        firstName : 'Abdul',
+        lastName : 'Charis'
+       };
+
+       const name = person.firstName || person.lastName;
+       document.writeln(`<p>${name}</p>`);
+
+       /*operator AND (&&) di non boolean
+       kebalikan dari OR yaitu mengambil nilai 
+       falsy dari kanan jika semua truthy maka nilai truthy
+       yang terakhir yang di ambil
+       */
+
+       console.info('HELLO' && ''); //string kosong ('')
+       console.info('' && []); //string kosong ('')
+       console.info('0' && 'NOL'); //'NOL'
+       console.info(0 && 'NOL'); //0
+       console.info(null && 'NULL'); //null
+       console.info(undefined && 'UNDEFINED'); //undefined
+       console.info('undefined' && 'null'); //null
+       
+       const name2 = person.firstName && person.lastName;
+       document.writeln(`<p>${name2}</p>`);
+
+
+
+    </script>
+</body>
+</html>

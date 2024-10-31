@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Optioonal Chaining</title>
+</head>
+<body>
+    <script>
+        //jika kita ingin mengecek sebuah variabel dengan mengunakan if akan sangat lama dan banyak
+
+        const person = {
+            address :{
+                country : 'Indonesia'
+            }
+        };
+
+        let country =person?.address?.country; //jika ingin mengunakan optional chaining tinggal masukan (?) di belakang property yang anda ingin cek 
+
+    //if (person.address !==undefined && person.address !== null){
+    //    country = person.address.country;
+    //}
+
+
+    document.writeln(`<p?>${country}</p?`);
+    </script>
+    
+</body>
+</html>
