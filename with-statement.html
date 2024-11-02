@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        /* untuk white statement sendiri digunakan untuk 
+        mempermudah kita dalam mengaetahui nilai variabel
+        tapi jarang di gunakan karena ambigu
+        */
+       
+        //ini jika tidak menggunakan with statement
+        const person ={
+            firstName: 'Abdul',
+            lastName:'Charis'
+        };
+
+        //kenapa di sebut ambigu karena variabel const firstName dan lastName tidak akan di baca 
+
+        const firstName = 'Eko';
+        const lastName = 'Nugraha';
+
+        document.writeln(`<p>${person.firstName}</P>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+
+        //ini jika menggunakan with statement
+
+        with(person){
+            document.writeln(`<p>${firstName}</p>`);
+            document.writeln(`<p>${lastName}</p>`);
+        }
+         
+    </script>
+</body>
+</html>

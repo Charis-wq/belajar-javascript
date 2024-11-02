@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+        /* for digunakan untuk mengetahui value 
+        di dalam array dan string tetapi tidak bisa 
+        di pakai di object karena tidak iterabel
+        */ 
+
+        const names =['Abdul','Charis'];
+        for(name of names){
+            document.writeln(`<p>${name}</P>`);
+        }
+
+        //untuk di string 
+
+        const fullName ='Abdul Charis';
+    for(character of fullName){
+        document.writeln(`<p>${character}</P>`);
+        
+    }
+
+    //mari kita coba di object tidak akan terjadi apa-apa
+
+    const person ={
+        firstName: 'Abdul',
+        lastName: 'Charis'
+    };
+    for(name of peerson){
+        document.writeln(`<p>${name}</P>`);
+    }
+
+
+    </script>
+
+</body>
+</html>
+

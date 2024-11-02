@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        /* for in untuk mengecek
+        property di didalam variabel object 
+        bisa juga di array tapi tidak di sarankan
+        */ 
+       const person ={
+        firstName: 'Abdul',
+        lastName: 'Charis'
+       };
+
+       for(const property in person ) {
+        document.writeln(`<p>${property} : ${person[property]}</p>`);
+       }
+
+
+       /*untuk array sendiri jika kita menggunaka array 
+       maka yang kita dapat bukan property tetapi index
+       */
+
+       const name =['Abdul','','Charis'];
+       for(const index in name){
+        document.writeln(`<p>${index} : ${name[index]}</p>`);
+       }
+
+
+    </script>
+</body>
+</html>
