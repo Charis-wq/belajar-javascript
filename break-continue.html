@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Break dab Countinue</title>
+</head>
+<body>
+    <script>
+
+        /* untuk kata kunci break 
+        adalah untuk menghentikan total perulangan sekaligus
+        */ 
+
+        let counter = 1;
+
+        while (true){
+            document.writeln(`<p>pengulangan ke-${counter}</p>`);
+            counter++;
+
+            if (counter > 10){
+                break;
+            }
+        }
+
+        /* untuk continue yaitu adalah kata kunci yang 
+        menghentikan perulangan saat ini dan melanjutkan 
+        perulangan selanjutnya
+        */ 
+
+
+        for(let i = 1; i <= 10; i++){
+            if (i % 2 === 0){
+                continue;
+            }
+            document.writeln(`<p>pengulangan ke-${i}</p>`);
+        }
+
+    
+    </script>
+</body>
+</html>
