@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Optional Parameter</title>
+</head>
+<body>
+    <script>
+        /* secara default paraameter itu optional
+        artinya kita tidak wajib mengisi valuenya ketika memanggil function
+        tapi jika tidak ada valunya maka akan bernila undefined
+        */ 
+
+        function sayHello(firstName,middelName,lastName){
+            document.writeln(`<p>${firstName}</p>`);
+            document.writeln(`<p>${middelName}</p>`);
+            document.writeln(`<p>${lastName}</p>`); 
+
+        }
+
+        sayHello();
+        sayHello('Abdul');
+        sayHello('Abdul','Charis');
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+        /* function itu tidak menghasilkan value apapun
+        tapi kita bisa membuat function mengembalikan value
+        kita akan menggunakan kata kunci return di dalam functionnya
+        lalu di ikuti dengan kata kunci functionnya,
+        function hanya bisa mengambalikan satu data saja,
+        kalo kita ingin mengembalikan beberapa data kita gunakan
+        array sebagai return valuenya.
+        */
+
+        //membuat value dengan parameter dan return value
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say;
+        }
+        
+
+        //memanggil function dengan return value
+        const result = sayHello('Abdul','Charis');
+        document.writeln(`<p>${result}</p>`);
+
+
+        //function return value lebih dari satu 
+        function getFinalScore(value) {
+            if (value > 90){
+                return 'A';
+            } else if(value > 80) {
+                return 'B';
+            } else if (value > 70) {
+                return 'C';
+            } else if (value > 60) {
+                return 'D';
+            }else{
+                return 'E';
+            }
+
+        }
+
+        const finalScore = getFinalScore(85);
+        document.writeln(`<p>${finalScore}</p>`);
+
+        //menghentikan eksekusi dengan return,kita bisa menghentikan eksekusi dengan sebuah function
+
+        function isData(array, searchValue){
+            for (const element of array){
+                console.info(`interaksi Element ${element}`);
+                if(element === searchValue){
+                    return true;
+
+                }
+
+            }
+            return false;
+        }
+
+        const array =[1,2,3,4,5,6,7,8,9,10];
+        const search = 8;
+        const found = isData(array, search);
+        document.writeln(`<p>${found}</P>`);
+
+
+
+
+
+    </script>
+</body>
+</html>
