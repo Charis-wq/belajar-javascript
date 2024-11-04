@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+
+        /*rest  parameter adalah fitur dimana kita bisa mengirim data
+        sebanyak banya knya pada satu parameter dan akan di konversi menjadi array
+        rest parameter hanya boleh ada satu function saja tidak boleh lebih
+        rest parameter harus berada di akhir posisinya ,kecuali memanga ada 1 parameter
+        */
+
+
+        function sum(name, ...data) {
+            let total = 0;
+            for(const item of data){
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</P>`);
+        }
+
+        sum('Orange',2,6,2,5,7,8,5,8,5,3);
+        sum('Melon',3,4,5,7,8,1,6);
+        sum('Banana',2,3,4,5,6,6,7,8,2,2,3);
+
+
+        /*spread syntax terkadang kita sudah terlanjur mempunyai array
+        dengan adanya spread syntax ini kita juga bisa mengirim array 
+        ke rest parameter dengan cara ...(titik tiga) di ikuti dengan arraynya
+        lketika memamnggil functionnya.
+        */
+
+        const value = [30,50,35,23,46,12,37];
+        sum('Value',...value); // tinggal seperti ini saja 
+
+
+        /* arguments object,sebelum ada fitur rest parameter sudah ada fitur ini
+        arguments object adalah sebuah fitur yang kita bisa memamnggil semua parameter
+        dalam bentuk array dengan menggunakan object bernama arguments
+        namun di sarankan lebih menggunakan rest parameter untuk sekarang
+        di banding argument object.
+        */
+
+
+        function oldSum(){
+            let total =  0;
+            for (const argument of arguments){
+                total += argument;
+            }
+            document.writeln(`<P>Total is ${total}</P>`);
+        }
+
+        oldSum(3,4,5,6,7,8,2,24,);
+
+         
+    </script>
+</body>
+</html>
