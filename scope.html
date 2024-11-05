@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+
+        /*scope merupakan area akses data,ada 2 jenis scope global dan local
+        setiap kita membuat function maka kita akan membuat local scope 
+        untuk function tersebut.
+        data global scope bisa di akses dari local scope namun data local scope
+        hanya bisa di akses di local scope tersebut atau scope local di bawahnya.
+        */
+
+        //global scope
+
+        let counter = 0;
+
+
+        function hitMe(){
+            //local scope
+
+        counter++; //kita bisa akses global scope di local scope
+
+        }
+
+
+        hitMe();
+        hitMe();
+
+        console.info(counter);
+
+
+        //local scope
+
+        function first(){
+            //local scope
+            let firstVariabel ='first';
+            console.info(firstVariabel);// bisa di akses
+        }
+
+
+        function second(){
+            //local scope
+            let secondVariabel  = 'second';
+            console.info(secondVariabel);// bisa di akses
+        }
+
+        first();
+        second();
+        pertama();
+       pertama();
+       
+       
+
+        //console.info(firstVariabel);// tidak akan bisa di akses/ERROR
+        //console.info(secondVariabel);// tidak akan bisa di akses/ERROR
+
+
+        //nested function scope
+        
+        function pertama(){
+            let nilaiPertama = 'Nilai';
+          
+            function kedua(){
+                console.info(nilaiPertama);//jadi local function 1 bisa di akses di local scope 2
+              const nilaiKedua = 'nilai';
+
+            }
+            kedua();
+           // console.info(nilaiKedua);//tapi function ke 2 tidak bisa di akses di function 1/ERROR
+
+        }
+
+        
+        
+       
+
+    
+</script>
+      
+</body>
+</html>
