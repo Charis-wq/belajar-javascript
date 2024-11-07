@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variabel Var</title>
+</head>
+<body>
+    <script>
+        /* var sekarang tidak di rekomendasikan lagi dan di ganti oleh let
+        alasan var tidak di rekomendasikan adalah karena var tidak menggunakan 
+        blok scope artinya tidak mengikat ke local scope,karena masalah ini var  
+        jadi tidak terprediksi.
+        */ 
+       
+        
+        //menggunakan let
+        //global scope 
+        let i = 20;
+
+        for (let i = 0; i < 10; i++) {
+             //local scope
+             console.info(`Local ${i}`)
+       
+
+        }
+
+        console.info(`Global ${i}`);
+
+
+        //menggunakan var
+
+        //global scope 
+       /* var i = 20;
+
+        for (var i = 0; i < 10; i++) {
+             //local scope
+             console.info(`Local ${i}`)
+       
+
+        }
+
+        console.info(`Global ${i}`);
+       */
+       
+    </script>
+</body>
+</html>
